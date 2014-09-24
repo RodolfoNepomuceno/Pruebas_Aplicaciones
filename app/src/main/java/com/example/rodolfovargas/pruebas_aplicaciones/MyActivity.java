@@ -1,5 +1,6 @@
 package com.example.rodolfovargas.pruebas_aplicaciones;
 
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,10 +9,17 @@ import android.view.MenuItem;
 
 public class MyActivity extends ActionBarActivity {
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
+
+        DialogFragment dialog = new Custom_java();
+        dialog.show(getSupportFragmentManager(), "dialog");
+
     }
 
 
